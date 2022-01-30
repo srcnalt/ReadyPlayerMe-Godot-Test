@@ -1,0 +1,37 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bqd8spdhbg50y"
+path="res://.godot/imported/walking.glb-5bb24e85246797dda75ed263db799109.scn"
+
+[deps]
+
+source_file="res://walking.glb"
+dest_files=["res://.godot/imported/walking.glb-5bb24e85246797dda75ed263db799109.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="Scene Root"
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+import_script/path=""
+_subresources={
+"animations": {
+"Walk": {
+"save_to_file/enabled": false,
+"save_to_file/keep_custom_tracks": "",
+"save_to_file/path": "",
+"settings/loop_mode": 1
+}
+}
+}

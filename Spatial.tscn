@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkels37veiw20"]
+
+[ext_resource type="Script" path="res://AvatarLoader.gd" id="1"]
+
+[node name="Spatial" type="Node3D"]
+script = ExtResource( "1" )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+use_threads = true
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+fov = 40.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.79915, 0.212406, -0.562355, 0, 0.935493, 0.353344, 0.601132, -0.282375, 0.747599, 0, 0, 0)
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="TextEdit" parent="Control"]
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 10.0
+offset_right = -40.0
+offset_bottom = 50.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+anchor_right = 1.0
+offset_left = 40.0
+offset_top = 60.0
+offset_right = -40.0
+offset_bottom = 75.0
+text = "Load Avatar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
