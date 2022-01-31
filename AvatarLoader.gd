@@ -4,6 +4,19 @@ var anim_node: AnimationPlayer
 var avatar: Node3D
 var http_request: HTTPRequest = HTTPRequest.new()
 
+var draging: bool = false
+var difference: float = 0
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		difference = event.relative.x
+	if event is InputEventMouseButton:
+		draging = event.is_pressed()
+
+func _process(delta):
+	if avatar != null and draging:
+		avatar.rotate_y(difference * delta)
+
 func _on_button_pressed():
 	if avatar != null:
 		avatar.free()
