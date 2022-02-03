@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Ready Player Me"
-run/main_scene="res://Spatial.tscn"
+run/main_scene="res://Test Scene.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0")
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [physics]
 
